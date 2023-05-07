@@ -18,7 +18,8 @@ type User struct {
 func main() {
 	http.HandleFunc("/set", setHandler)
 	http.HandleFunc("/get", getHandler)
-	http.ListenAndServe(":8080", nil)
+    fmt.Println("Listening on port 4000...")
+	http.ListenAndServe(":4000", nil)
 }
 
 func setHandler(w http.ResponseWriter, r *http.Request) {
